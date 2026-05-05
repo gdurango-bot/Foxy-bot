@@ -70,4 +70,6 @@ client.on('messageCreate', async (message) => {
 
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN)
+  .then(() => console.log('Token OK, conectando...'))
+  .catch(err => console.error('Login failed:', err.message));
