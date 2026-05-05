@@ -77,7 +77,7 @@ client.on('messageCreate', async (message) => {
   try {
     const response = await axios.post(SCRIPT_URL, { username: message.author.username, status });
     console.log(`✅ ${message.author.username} -> ${status}`, response.data);
-    await message.delete().catch((e) => console.log('⚠️ Could not delete:', e.message));
+    // await message.delete().catch((e) => console.log('⚠️ Could not delete:', e.message));
   } catch (err) {
     console.error('❌ Axios error:', err.message);
   }
