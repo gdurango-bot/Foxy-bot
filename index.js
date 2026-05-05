@@ -6,7 +6,6 @@ http.createServer((req, res) => {
   console.log('Health check server running');
 });
 
-require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 const axios = require('axios');
 
